@@ -801,10 +801,8 @@ jobs:
         tree2.write(path.join('dist', 'appcast.xml'), encoding='utf-8', xml_declaration=True)
         dumpfile(path.join('dist', 'appcast.xml'))
         tree2.write(path.join('dist2', 'appcast.xml'), encoding='utf-8', xml_declaration=True)
-      if: env.HAVE_SECRET
       id: files-updated
       env:
-        HAVE_SECRET: ${{ secrets.SPARKLE_ECDSA && '1' || '' }}
         BUILD_NUMBER: ${{ steps.setup-vars.outputs.build-number }}
     - name: download ghr
       run: |
