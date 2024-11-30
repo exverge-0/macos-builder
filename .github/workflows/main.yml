@@ -592,7 +592,6 @@ jobs:
     - name: brew install / link
       run: |
         brew install p7zip automake
-        brew uninstall --ignore-dependencies openssl@3 || :
       env:
         HOMEBREW_NO_AUTO_UPDATE: 1
     - name: Cache qt
