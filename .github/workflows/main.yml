@@ -472,7 +472,7 @@ jobs:
       continue-on-error: true
     - uses: actions/checkout@v3
       with:
-        repository: ${{ steps.oidc.outputs.job_workflow_repo_name_and_owner || inputs.submodule-refs && 'minecraft-linux/macos-builder' || github.repository }}
+        repository: ${{ steps.oidc.outputs.job_workflow_repo_name_and_owner || inputs.submodule-refs && 'exverge-0/macos-builder' || github.repository }}
         ref: ${{ steps.oidc.outputs.job_workflow_repo_ref || inputs.submodule-refs && 'main' || github.sha || github.ref }}
     - name: Sync Submodule Sources
       if: ${{ !inputs.use-repo-files && inputs.submodule-refs }}
